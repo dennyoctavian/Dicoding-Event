@@ -94,7 +94,8 @@ class DetailEventActivity : AppCompatActivity() {
                         .error(android.R.color.holo_red_dark)
                         .into(binding.image)
                     binding.ownerName.text = it.ownerName
-                    binding.startTime.text = "Jam Acara :  ${formatDate(it.beginTime)}" + "\n" + "Sisa Kuota : ${it.quota}"
+                    binding.startTime.text = "Jam Acara :  ${formatDate(it.beginTime)}"
+                    binding.quota.text ="Sisa Kuota: ${it.quota - it.registrants}"
                     val descriptionText = Html.fromHtml(it.description, Html.FROM_HTML_MODE_LEGACY)
                     binding.description.text = descriptionText
                     binding.gotoEvent.setOnClickListener { _ ->
