@@ -19,6 +19,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.dennyoctavian.dicodingevent.database.EventApp
 import com.dennyoctavian.dicodingevent.databinding.ActivityDetailEventBinding
+import com.dennyoctavian.dicodingevent.helpers.Helper
 import com.dennyoctavian.dicodingevent.models.Event
 import com.dennyoctavian.dicodingevent.viewmodels.DetailEventViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -100,7 +101,7 @@ class DetailEventActivity : AppCompatActivity() {
                         .error(android.R.color.holo_red_dark)
                         .into(binding.image)
                     binding.ownerName.text = it.ownerName
-                    binding.startTime.text = "Jam Acara :  ${formatDate(it.beginTime)}"
+                    binding.startTime.text = "Jam Acara :  ${Helper.formatDate(it.beginTime)}"
                     binding.quota.text ="Sisa Kuota: ${it.quota - it.registrants}"
                     val descriptionText = Html.fromHtml(it.description, Html.FROM_HTML_MODE_LEGACY)
                     binding.description.text = descriptionText
@@ -147,12 +148,5 @@ class DetailEventActivity : AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun formatDate(indonesiaTime: String): String {
-        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-        val localDateTime = LocalDateTime.parse(indonesiaTime, formatter)
 
-        val outputFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy HH:mm", Locale("id", "ID"))
-        return localDateTime.format(outputFormatter)
-    }
 }
