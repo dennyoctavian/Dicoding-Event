@@ -121,12 +121,13 @@
             app:layout_constraintTop_toBottomOf="@id/description" />
 
         <ImageButton
+            android:contentDescription="@string/image"
             android:id="@+id/saveButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/white"
-            android:tint="@android:color/holo_red_dark"
+            app:tint="@android:color/holo_red_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
             app:srcCompat="@drawable/ic_favorite_outline" />

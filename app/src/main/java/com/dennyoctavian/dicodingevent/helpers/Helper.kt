@@ -44,7 +44,7 @@ object Helper {
     fun sendNotification(context: Context, channelId: String, title: String, message: String) {
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channelName = "Dicoding Event"
             val channelDescription = "Channel for app notifications from Dicoding Event"
             val importance = NotificationManager.IMPORTANCE_DEFAULT

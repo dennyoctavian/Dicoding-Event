@@ -25,9 +25,6 @@ import com.dennyoctavian.dicodingevent.viewmodels.DetailEventViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.Locale
 
 
 class DetailEventActivity : AppCompatActivity() {

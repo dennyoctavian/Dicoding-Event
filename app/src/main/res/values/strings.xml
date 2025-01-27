@@ -7,7 +7,7 @@
     <string name="image">Image</string>
     <string name="career_session_android_memulai_karir_sebagai_android_developer">Career Session Android: Memulai Karir Sebagai Android Developer</string>
     <string name="gdsc_mulawarman_university">GDSC Mulawarman University</string>
-    <string name="jam_2024_05_18_10_00_00_sampai_2024_05_18_12_00_00">Jam 2024–05-18 10:00:00 sampai 2024-05-18 12:00:00</string>
+    <string name="jam_2024_05_18_10_00_00_sampai_2024_05_18_12_00_00">Jam 2024–05–18 10:00:00 sampai 2024-05-18 12:00:00</string>
     <string name="sisa_kuota_100">Sisa Kuota : 100</string>
     <string name="deskripsi_acara_atau_lainnya">Deskripsi acara atau lainnya</string>
     <string name="menuju_event">Menuju Event</string>
@@ -21,7 +21,6 @@
     <string name="recommendation_event_for_you">Recommendation event for you!</string>
     <string name="tidak_ada_upcoming_event">Tidak Ada Upcoming Event</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorite">Favorite</string>
     <string name="setting">Setting</string>
     <string name="favorite_event">Favorite Event</string>

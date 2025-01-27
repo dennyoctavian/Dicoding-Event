@@ -1,13 +1,11 @@
 package com.dennyoctavian.dicodingevent.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.dennyoctavian.dicodingevent.R
+import androidx.fragment.app.Fragment
 import com.dennyoctavian.dicodingevent.databinding.FragmentSettingBinding
-import com.dennyoctavian.dicodingevent.databinding.FragmentUpcomingBinding
 import com.dennyoctavian.dicodingevent.helpers.Helper
 
 // TODO: Rename parameter arguments, choose names that match

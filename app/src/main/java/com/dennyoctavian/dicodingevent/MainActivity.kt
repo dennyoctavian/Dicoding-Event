@@ -13,13 +13,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
 import com.dennyoctavian.dicodingevent.databinding.ActivityMainBinding
 import com.dennyoctavian.dicodingevent.helpers.Helper
-import com.dennyoctavian.dicodingevent.workers.DailyReminderWorker
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
