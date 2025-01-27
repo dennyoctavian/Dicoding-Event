@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Dicoding Event</string>
+    <string name="home">Home</string>
+    <string name="upcoming">Upcoming</string>">
+    <string name="finished">Finished</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="image">Image</string>
+    <string name="career_session_android_memulai_karir_sebagai_android_developer">Career Session Android: Memulai Karir Sebagai Android Developer</string>
+    <string name="gdsc_mulawarman_university">GDSC Mulawarman University</string>
+    <string name="jam_2024_05_18_10_00_00_sampai_2024_05_18_12_00_00">Jam 2024–05-18 10:00:00 sampai 2024-05-18 12:00:00</string>
+    <string name="sisa_kuota_100">Sisa Kuota : 100</string>
+    <string name="deskripsi_acara_atau_lainnya">Deskripsi acara atau lainnya</string>
+    <string name="menuju_event">Menuju Event</string>
+    <string name="event_yang_sudah_selesai">Event yang Sudah Selesai</string>
+    <string name="tidak_ada_past_event">Tidak Ada Past Event</string>
+    <string name="dicoding_event">Dicoding Event</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="finished_events">Finished Events</string>
+    <string name="tidak_ada_upcoming_event_tersedia">Tidak Ada Upcoming Event Tersedia</string>
+    <string name="tidak_ada_past_event_tersedia">Tidak Ada Past Event Tersedia</string>
+    <string name="recommendation_event_for_you">Recommendation event for you!</string>
+    <string name="tidak_ada_upcoming_event">Tidak Ada Upcoming Event</string>
+    ">
+</resources>
