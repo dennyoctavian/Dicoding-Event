@@ -14,4 +14,14 @@
         android:icon="@drawable/ic_finished"
         android:title="@string/finished" />
 
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/favorite" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/setting" />
+
 </menu>

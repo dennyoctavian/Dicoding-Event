@@ -2,9 +2,13 @@ package com.dennyoctavian.dicodingevent.models
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "events")
 @Parcelize
 data class Event(
+    @PrimaryKey
     val id: Long,
     val name: String,
     val summary: String,
@@ -20,3 +24,5 @@ data class Event(
     val endTime: String,
     val link: String,
 ): Parcelable
+
+

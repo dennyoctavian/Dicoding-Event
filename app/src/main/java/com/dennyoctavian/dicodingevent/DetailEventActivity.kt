@@ -8,16 +8,22 @@ import android.os.Bundle
 import android.text.Html
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
+import com.dennyoctavian.dicodingevent.database.EventApp
 import com.dennyoctavian.dicodingevent.databinding.ActivityDetailEventBinding
 import com.dennyoctavian.dicodingevent.models.Event
 import com.dennyoctavian.dicodingevent.viewmodels.DetailEventViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -101,6 +107,37 @@ class DetailEventActivity : AppCompatActivity() {
                     binding.gotoEvent.setOnClickListener { _ ->
                         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(it.link))
                         startActivity(intent)
+                    }
+                    val eventDao = (application as EventApp).db.eventDao()
+                    lifecycleScope.launch {
+                        val event = eventDao.getEventById(it.id.toString())
+                        if (event != null) {
+                            binding.saveButton.setImageResource(R.drawable.ic_favorite)
+                        }else {
+                            binding.saveButton.setImageResource(R.drawable.ic_favorite_outline)
+                        }
+                    }
+
+                    binding.saveButton.setOnClickListener { _ ->
+                        CoroutineScope(Dispatchers.IO).launch {
+                            val event = eventDao.getEventById(it.id.toString())
+                            if(event != null) {
+                                eventDao.delete(it)
+                                runOnUiThread {
+                                    binding.saveButton.setImageResource(R.drawable.ic_favorite_outline)
+                                    Toast.makeText(applicationContext, "Berhasil Menghapus Event dari Favorit", Toast.LENGTH_LONG).show()
+                                }
+                                return@launch
+                            }else {
+                                eventDao.insert(it)
+                                runOnUiThread {
+                                    binding.saveButton.setImageResource(R.drawable.ic_favorite)
+                                    Toast.makeText(applicationContext, "Berhasil Menambahkan Event ke Favorit", Toast.LENGTH_LONG).show()
+                                }
+                                return@launch
+                            }
+
+                        }
                     }
                 }
             }
